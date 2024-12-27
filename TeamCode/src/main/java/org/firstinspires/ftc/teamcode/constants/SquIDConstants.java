@@ -8,6 +8,17 @@ import com.acmerobotics.dashboard.config.Config;
 @Config
 public class SquIDConstants {
 
-    public static double p = 0;
+    public static double TRANSLATION_P = 0;
+
+    public static double HEADING_P = 0;
+
+    public static double TARGET_X = 0;
+
+    public static double TARGET_Y = 0;
+
+    /**
+     * In degrees.
+     */
+    public static double TARGET_HEADING = 0;
 
 }

@@ -25,6 +25,10 @@ public class SquIDController {
         return signedSqrt(error) * p;
     }
 
+    public void setP(double p) {
+        this.p = p;
+    }
+
     /**
      * Signed square root function.
      * @return The square root of the magnitude of <code>val</code>, with the same sign as <code>val</code>.

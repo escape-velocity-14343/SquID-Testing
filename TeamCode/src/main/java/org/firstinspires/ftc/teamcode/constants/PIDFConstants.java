@@ -8,10 +8,25 @@ import com.acmerobotics.dashboard.config.Config;
 @Config
 public class PIDFConstants {
 
-    public static double p = 0;
+    public static double TRANSLATION_P = 0;
 
-    public static double d = 0;
+    public static double TRANSLATION_D = 0;
 
-    public static double f = 0;
+    public static double TRANSLATION_F = 0;
+
+    public static double HEADING_P = 0;
+
+    public static double HEADING_D = 0;
+
+    public static double HEADING_F = 0;
+
+    public static double TARGET_X = 0;
+
+    public static double TARGET_Y = 0;
+
+    /**
+     * In degrees.
+     */
+    public static double TARGET_HEADING = 0;
 
 }

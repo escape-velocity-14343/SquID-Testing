@@ -22,8 +22,6 @@ public class LocalizationTest extends LinearOpMode {
 
         MecanumDrive drive = new MecanumDrive(hardwareMap, new Pose2d(0, 0, 0));
 
-        PinpointLocalizer pinpoint = new PinpointLocalizer(hardwareMap, new Pose2d(0, 0, 0));
-
         waitForStart();
 
         while (opModeIsActive()) {
@@ -37,14 +35,14 @@ public class LocalizationTest extends LinearOpMode {
 
             drive.updatePoseEstimate();
 
-            telemetry.addData("x", pinpoint.getPose().position.x);
-            telemetry.addData("y", pinpoint.getPose().position.y);
-            telemetry.addData("heading (deg)", Math.toDegrees(pinpoint.getPose().heading.toDouble()));
+            telemetry.addData("x", drive.localizer.getPose().position.x);
+            telemetry.addData("y", drive.localizer.getPose().position.y);
+            telemetry.addData("heading (deg)", Math.toDegrees(drive.localizer.getPose().heading.toDouble()));
             telemetry.update();
 
             TelemetryPacket packet = new TelemetryPacket();
             packet.fieldOverlay().setStroke("#3F51B5");
-            Drawing.drawRobot(packet.fieldOverlay(), pinpoint.getPose());
+            Drawing.drawRobot(packet.fieldOverlay(), drive.localizer.getPose());
             FtcDashboard.getInstance().sendTelemetryPacket(packet);
         }
     }
