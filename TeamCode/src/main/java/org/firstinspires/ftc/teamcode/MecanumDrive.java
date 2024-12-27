@@ -263,6 +263,11 @@ public final class MecanumDrive {
         rightFront.setPower(wheelVels.rightFront.get(0) / maxPowerMag);
     }
 
+    public void setDrivePowersFieldCentric(PoseVelocity2d powers) {
+        setDrivePowers(localizer.getPose().heading.times(powers));
+    }
+
+
     public final class FollowTrajectoryAction implements Action {
         public final TimeTrajectory timeTrajectory;
         private double beginTs = -1;
