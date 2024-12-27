@@ -264,7 +264,7 @@ public final class MecanumDrive {
     }
 
     public void setDrivePowersFieldCentric(PoseVelocity2d powers) {
-        setDrivePowers(localizer.getPose().heading.times(powers));
+        setDrivePowers(localizer.getPose().heading.inverse().times(powers));
     }
 
 
