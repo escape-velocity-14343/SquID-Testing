@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.controllers;
+package org.firstinspires.ftc.teamcode.lib.controllers;
 
 /**
  * The classic SquID controller. Operates off the control law of response being proportional to the (signed) square root of the error.
